@@ -1,7 +1,0 @@
-<svg width="900" height="220" viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg">
-<rect width="900" height="220" fill="#ffffff"/>
-<text x="60" y="110" font-family="'Helvetica Neue',Arial,sans-serif" font-size="64" font-weight="700" fill="#0d0d0d" letter-spacing="-1">MOSES</text>
-<text x="60" y="145" font-family="'JetBrains Mono','SF Mono',Consolas,monospace" font-size="15" fill="#8a8a8a" letter-spacing="2">AI / ML ENGINEER — FULL-STACK DEVELOPER</text>
-<line x1="60" y1="175" x2="840" y2="175" stroke="#0d0d0d" stroke-width="1" opacity="0.15"/>
-<text x="60" y="200" font-family="'JetBrains Mono','SF Mono',Consolas,monospace" font-size="12" fill="#8a8a8a" letter-spacing="1">COMPUTER SCIENCE STUDENT · BUILDING END-TO-END SOLUTIONS</text>
-</svg>

@@ -1,37 +1,117 @@
 <div align="center">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/header.svg"/><img src="assets/header.svg" alt="Moses"/></picture>
+# Moses Fernando
 
-<a href="https://www.moses.vercel.app"><picture><source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/PORTFOLIO-0d1117?style=flat-square&logoColor=ffffff"/><img src="https://img.shields.io/badge/PORTFOLIO-ffffff?style=flat-square&logoColor=000000" alt="Portfolio"/></picture></a>
-<a href="https://github.com/mosesfdo"><picture><source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/GITHUB-0d1117?style=flat-square&logo=github&logoColor=ffffff"/><img src="https://img.shields.io/badge/GITHUB-ffffff?style=flat-square&logo=github&logoColor=000000" alt="GitHub"/></picture></a>
+**Full-Stack Developer · AI Engineer**
+
+I build web apps and AI-powered tools — from polished interfaces to the systems running behind them.
+
+<a href="https://moses.vercel.app">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/portfolio-ffffff?style=for-the-badge&logo=vercel&logoColor=000000" />
+    <img src="https://img.shields.io/badge/portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" />
+  </picture>
+</a>
+<a href="https://github.com/mosesfdo">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/@mosesfdo-ffffff?style=for-the-badge&logo=github&logoColor=000000" />
+    <img src="https://img.shields.io/badge/@mosesfdo-000000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </picture>
+</a>
 
 </div>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s01.svg"/><img src="assets/s01.svg" alt="01 — whoami"/></picture>
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/whoami.svg"/><img src="assets/whoami.svg" alt="About Moses"/></picture>
+---
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s02.svg"/><img src="assets/s02.svg" alt="02 — system map"/></picture>
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/ecosystem.svg"/><img src="assets/ecosystem.svg" alt="Discipline map"/></picture>
+## about
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s03.svg"/><img src="assets/s03.svg" alt="03 — projects"/></picture>
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/projects.svg"/><img src="assets/projects.svg" alt="Projects (placeholder)"/></picture>
+```ts
+const moses = {
+  role:      ["Full-Stack Developer", "AI Engineer"],
+  focus:     ["web applications", "AI tooling", "product design"],
+  building:  "a platform for developers to find collaborators",
+  always:    "shipping something",
+};
+```
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s04.svg"/><img src="assets/s04.svg" alt="04 — telemetry"/></picture>
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/telemetry.svg"/><img src="assets/telemetry.svg" alt="Animated build telemetry"/></picture>
+---
+
+## projects
+
+| project | description | status |
+|---|---|---|
+| [noxhange](https://github.com/mosesfdo/noxhange) | — | — |
+| [collab platform](https://github.com/mosesfdo) | find collaborators for your projects | 🚧 in progress |
+
+> swap in real descriptions and links when they're ready
+
+---
+
+## stack
+
+**Languages**
+
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+
+**Frontend**
+
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+
+**Backend & AI**
+
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
+
+**Tools**
+
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
+
+---
+
+## stats
 
 <div align="center">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=mosesfdo&show_icons=true&theme=transparent&hide_border=true&bg_color=00000000&title_color=ffffff&icon_color=ffffff&text_color=ffffff&ring_color=ffffff"/><img src="https://github-readme-stats.vercel.app/api?username=mosesfdo&show_icons=true&theme=transparent&hide_border=true&bg_color=00000000&title_color=0d0d0d&icon_color=0d0d0d&text_color=0d0d0d&ring_color=0d0d0d" width="48%" alt="GitHub stats"/></picture>
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://nirzak-streak-stats.vercel.app/?user=mosesfdo&hide_border=true&background=00000000&stroke=ffffff&ring=ffffff&fire=ffffff&currStreakLabel=ffffff&sideLabels=ffffff&sideNums=ffffff&dates=aaaaaa&currStreakNum=ffffff"/><img src="https://nirzak-streak-stats.vercel.app/?user=mosesfdo&hide_border=true&background=00000000&stroke=0d0d0d&ring=0d0d0d&fire=0d0d0d&currStreakLabel=0d0d0d&sideLabels=0d0d0d&sideNums=0d0d0d&dates=666666&currStreakNum=0d0d0d" width="48%" alt="GitHub streak"/></picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=mosesfdo&show_icons=true&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9&ring_color=58a6ff" />
+  <img src="https://github-readme-stats.vercel.app/api?username=mosesfdo&show_icons=true&hide_border=true&bg_color=ffffff&title_color=0969da&icon_color=0969da&text_color=24292f&ring_color=0969da" width="48%" alt="GitHub Stats" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://nirzak-streak-stats.vercel.app/?user=mosesfdo&hide_border=true&background=0d1117&stroke=58a6ff&ring=58a6ff&fire=58a6ff&currStreakLabel=58a6ff&sideLabels=c9d1d9&sideNums=c9d1d9&dates=8b949e&currStreakNum=c9d1d9" />
+  <img src="https://nirzak-streak-stats.vercel.app/?user=mosesfdo&hide_border=true&background=ffffff&stroke=0969da&ring=0969da&fire=0969da&currStreakLabel=0969da&sideLabels=24292f&sideNums=24292f&dates=57606a&currStreakNum=24292f" width="48%" alt="GitHub Streak" />
+</picture>
 
 </div>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s05.svg"/><img src="assets/s05.svg" alt="05 — timeline"/></picture>
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/timeline.svg"/><img src="assets/timeline.svg" alt="Timeline (placeholder)"/></picture>
+<div align="center">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s06.svg"/><img src="assets/s06.svg" alt="06 — stack"/></picture>
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/stack.svg"/><img src="assets/stack.svg" alt="Technical stack"/></picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=mosesfdo&layout=compact&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mosesfdo&layout=compact&hide_border=true&bg_color=ffffff&title_color=0969da&text_color=24292f" width="40%" alt="Top Languages" />
+</picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/footer.svg"/><img src="assets/footer.svg" alt="Status"/></picture>
+</div>
 
-<!-- one responsive picture per visual; assets/ = light, assets/dark/ = dark -->
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=mosesfdo&theme=tokyo-night&hide_border=true" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=mosesfdo&theme=github-light&hide_border=true" alt="Activity Graph" />
+</picture>
+
+</div>
+
+---
+
+<div align="center">
+
+*let's build something.*
+
+</div>
