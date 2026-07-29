@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="100%" height="auto">
+  <defs>
+    <linearGradient id="scanline" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00FF41" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00FF41" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#00FF41" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Pure black background -->
+  <rect width="900" height="420" fill="#000000"/>
+  <rect width="900" height="420" fill="url(#scanline)">
+    <animate attributeName="y" values="0;420" dur="4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Scanline overlay -->
+  <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+    <rect width="4" height="2" fill="#00FF41" opacity="0.02"/>
+  </pattern>
+  <rect width="900" height="420" fill="url(#scanlines)"/>
+
+  <!-- Static noise flicker -->
+  <rect width="900" height="420" fill="#00FF41" opacity="0.003">
+    <animate attributeName="opacity" values="0;0.008;0;0.005;0" dur="2s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Matrix rain background -->
+  <g font-family="monospace" font-size="8" fill="#00FF41" opacity="0.06">
+    <text x="20" y="10">1 0 1 0 1 0 0 1 1 0 1 0 0 1</text>
+    <text x="20" y="22">0 1 1 0 0 1 1 0 0 1 0 1 1 0</text>
+    <text x="20" y="34">1 1 0 1 0 0 0 1 1 0 1 0 0 1</text>
+    <text x="20" y="46">0 0 1 0 1 1 1 0 0 1 0 0 1 1</text>
+    <text x="20" y="58">1 0 0 1 0 0 0 1 1 0 1 1 0 0</text>
+
+    <text x="720" y="20">0x7F 0xA3 0x4B</text>
+    <text x="720" y="50">0xE2 0x09 0xD1</text>
+    <text x="720" y="80">0x3C 0xF5 0x8A</text>
+    <text x="720" y="110">0xB0 0x6E 0x2C</text>
+  </g>
+
+  <!-- ASCII border frame -->
+  <g stroke="#00FF41" stroke-width="1" fill="none" opacity="0.15">
+    <rect x="15" y="15" width="870" height="390" rx="0"/>
+    <line x1="15" y1="50" x2="885" y2="50"/>
+  </g>
+
+  <!-- Corner markers -->
+  <g stroke="#00FF41" stroke-width="1.5" opacity="0.3">
+    <line x1="15" y1="15" x2="40" y2="15"/>
+    <line x1="15" y1="15" x2="15" y2="40"/>
+    <line x1="885" y1="15" x2="860" y2="15"/>
+    <line x1="885" y1="15" x2="885" y2="40"/>
+    <line x1="15" y1="405" x2="40" y2="405"/>
+    <line x1="15" y1="405" x2="15" y2="380"/>
+    <line x1="885" y1="405" x2="860" y2="405"/>
+    <line x1="885" y1="405" x2="885" y2="380"/>
+  </g>
+
+  <!-- Header bar -->
+  <text x="30" y="32" font-family="monospace" font-size="10" fill="#00FF41" opacity="0.4">moses-fdo@github:~$</text>
+  <text x="235" y="32" font-family="monospace" font-size="10" fill="#008F11" opacity="0.4">cat ./profile/README.md</text>
+  <circle cx="870" cy="28" r="3" fill="#00FF41" opacity="0.15">
+    <animate attributeName="opacity" values="0.15;0.4;0.15" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- ═══ MAIN ASCII ART ═══ -->
+
+  <!-- Big ASCII name art -->
+  <g transform="translate(45, 90)" font-family="monospace" font-weight="bold">
+    <text font-size="14" fill="#00FF41" opacity="0.08">
+      <tspan x="0" dy="0">  __  __           _          _____                _            _       </tspan>
+      <tspan x="0" dy="16"> |  \/  |         (_)        |  ___|              | |          | |      </tspan>
+      <tspan x="0" dy="16"> | \  / | ___  ___ _  ___   | |__ _ __  ___  ___ | | ___   ___| |_ ___ </tspan>
+      <tspan x="0" dy="16"> | |\/| |/ _ \/ __| |/ __|  |  __| '_ \/ __|/ _ \| |/ _ \ / __| __/ __|</tspan>
+      <tspan x="0" dy="16"> | |  | |  __/\__ \ | (__   | |__| | | \__ \ (_) | | (_) | (__| |_\__ \</tspan>
+      <tspan x="0" dy="16"> |_|  |_|\___||___/_|\___|  \____/_| |_|___/\___/|_|\___/ \___|\__|___/</tspan>
+    </text>
+  </g>
+
+  <!-- Main name — large -->
+  <g transform="translate(45, 205)">
+    <text font-family="monospace" font-size="36" font-weight="bold" fill="#00FF41" filter="url(#glow)">
+      MOSES FERNANDO
+    </text>
+  </g>
+
+  <!-- Terminal prompt with name -->
+  <g transform="translate(45, 245)">
+    <text font-family="monospace" font-size="13" fill="#008F11">user@system</text>
+    <text font-family="monospace" font-size="13" fill="#00FF41">:</text>
+    <text font-family="monospace" font-size="13" fill="#004D00">~</text>
+    <text font-family="monospace" font-size="13" fill="#00FF41">$</text>
+    <text x="140" y="0" font-family="monospace" font-size="13" fill="#00FF41">
+      ./whoami
+      <animate attributeName="opacity" values="1;1;0;1" dur="6s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- Typewriter output -->
+  <g transform="translate(45, 275)">
+    <text font-family="monospace" font-size="12" fill="#00FF41" opacity="0.7">
+      &gt; <tspan fill="#008F11">Software Developer</tspan>
+    </text>
+    <text x="0" y="20" font-family="monospace" font-size="12" fill="#00FF41" opacity="0.7">
+      &gt; <tspan fill="#008F11">Problem Solver</tspan>
+    </text>
+    <text x="0" y="40" font-family="monospace" font-size="12" fill="#00FF41" opacity="0.7">
+      &gt; <tspan fill="#008F11">Lifelong Learner</tspan>
+    </text>
+  </g>
+
+  <!-- Blinking cursor -->
+  <rect x="185" y="268" width="8" height="14" fill="#00FF41" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0;0.8" dur="1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Right side: system info panel -->
+  <g transform="translate(600, 80)">
+    <rect x="0" y="0" width="250" height="160" fill="#000000" stroke="#00FF41" stroke-width="0.5" opacity="0.2"/>
+    <text x="10" y="16" font-family="monospace" font-size="9" fill="#008F11">SYSTEM INFORMATION</text>
+    <line x1="10" y1="20" x2="240" y2="20" stroke="#00FF41" stroke-width="0.3" opacity="0.15"/>
+
+    <text x="10" y="36" font-family="monospace" font-size="9" fill="#00FF41">OS:</text>
+    <text x="50" y="36" font-family="monospace" font-size="9" fill="#004D00">arch-linux</text>
+
+    <text x="10" y="52" font-family="monospace" font-size="9" fill="#00FF41">UPTIME:</text>
+    <text x="70" y="52" font-family="monospace" font-size="9" fill="#004D00">13d 7h 42m</text>
+
+    <text x="10" y="68" font-family="monospace" font-size="9" fill="#00FF41">SHELL:</text>
+    <text x="60" y="68" font-family="monospace" font-size="9" fill="#004D00">zsh 5.9</text>
+
+    <text x="10" y="84" font-family="monospace" font-size="9" fill="#00FF41">EDITOR:</text>
+    <text x="65" y="84" font-family="monospace" font-size="9" fill="#004D00">nvim 0.10</text>
+
+    <text x="10" y="100" font-family="monospace" font-size="9" fill="#00FF41">LANG:</text>
+    <text x="55" y="100" font-family="monospace" font-size="9" fill="#004D00">TypeScript, JavaScript, Python</text>
+
+    <text x="10" y="116" font-family="monospace" font-size="9" fill="#00FF41">REPOS:</text>
+    <text x="60" y="116" font-family="monospace" font-size="9" fill="#004D00">7 public</text>
+
+    <text x="10" y="132" font-family="monospace" font-size="9" fill="#00FF41">UPDATED:</text>
+    <text x="75" y="132" font-family="monospace" font-size="9" fill="#004D00">2026-07-29</text>
+
+    <line x1="10" y1="140" x2="240" y2="140" stroke="#00FF41" stroke-width="0.3" opacity="0.15"/>
+    <text x="10" y="152" font-family="monospace" font-size="9" fill="#008F11">STATUS: ACTIVE</text>
+    <circle cx="220" cy="149" r="3" fill="#00FF41" opacity="0.4">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Bottom status bar -->
+  <g transform="translate(0, 380)">
+    <line x1="15" y1="0" x2="885" y2="0" stroke="#00FF41" stroke-width="0.5" opacity="0.15"/>
+    <text x="30" y="14" font-family="monospace" font-size="9" fill="#004D00">[NORMAL]</text>
+    <text x="120" y="14" font-family="monospace" font-size="9" fill="#004D00">profile.md</text>
+    <text x="220" y="14" font-family="monospace" font-size="9" fill="#004D00">UTF-8</text>
+    <text x="300" y="14" font-family="monospace" font-size="9" fill="#004D00">Ln 1, Col 1</text>
+    <text x="700" y="14" font-family="monospace" font-size="9" fill="#004D00">-- INSERT --</text>
+    <rect x="780" y="5" width="6" height="10" fill="#00FF41" opacity="0.3">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

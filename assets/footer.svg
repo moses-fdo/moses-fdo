@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 120" width="100%" height="80">
+  <rect width="900" height="120" fill="#000000"/>
+
+  <!-- Subtle scanline -->
+  <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+    <rect width="4" height="2" fill="#00FF41" opacity="0.015"/>
+  </pattern>
+  <rect width="900" height="120" fill="url(#scanlines)"/>
+
+  <!-- Top line -->
+  <line x1="0" y1="2" x2="900" y2="2" stroke="#00FF41" stroke-width="0.5" opacity="0.08"/>
+
+  <!-- ASCII art frame center -->
+  <g transform="translate(450, 60)" font-family="monospace" font-size="9" fill="#008F11" text-anchor="middle" opacity="0.5">
+    <text x="0" y="-20">╔══════════════════════════════════════╗</text>
+    <text x="0" y="-8">║</text>
+    <text x="0" y="-8" fill="#00FF41">moses-fdo@github</text>
+    <text x="0" y="-8">║</text>
+    <text x="0" y="4">╚══════════════════════════════════════╝</text>
+  </g>
+
+  <!-- Blinking dot left -->
+  <circle cx="200" cy="60" r="1.5" fill="#00FF41" opacity="0.15">
+    <animate attributeName="opacity" values="0.15;0.4;0.15" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Blinking dot right -->
+  <circle cx="700" cy="60" r="1.5" fill="#00FF41" opacity="0.15">
+    <animate attributeName="opacity" values="0.15;0.4;0.15" dur="2.5s" repeatCount="indefinite" begin="0.5s"/>
+  </circle>
+
+  <!-- Bottom text -->
+  <text x="450" y="105" font-family="monospace" font-size="8" fill="#004D00" text-anchor="middle">[ profile last updated: 2026-07-29 ]</text>
+</svg>
