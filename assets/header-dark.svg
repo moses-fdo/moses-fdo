@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" role="img" aria-labelledby="darkTitle darkDesc">
+  <title id="darkTitle">Moses Fernando — Full Stack Developer & AI Engineer</title>
+  <desc id="darkDesc">Hero banner with name, title, and tech focus areas on charcoal black</desc>
+
+  <defs>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.03"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="280" fill="#0A0A0A" rx="20"/>
+
+  <!-- Thin accent bar top -->
+  <rect x="45" y="40" width="810" height="2" fill="url(#accentGrad)" rx="1" opacity="0.5"/>
+
+  <!-- Subtle glow panel -->
+  <rect x="45" y="48" width="450" height="186" fill="url(#glow)" rx="12"/>
+
+  <!-- Name -->
+  <text x="60" y="110" font-family="'Fira Code', 'SF Mono', ui-monospace, 'Cascadia Code', monospace" font-size="46" font-weight="700" fill="#FFFFFF" letter-spacing="2">
+    moses-fdo
+  </text>
+
+  <!-- Title -->
+  <text x="60" y="148" font-family="'SF Mono', ui-monospace, 'Cascadia Code', monospace" font-size="14" fill="#6366F1" letter-spacing="5">
+    FULL STACK  ·  AI ENGINEER
+  </text>
+
+  <!-- Tagline -->
+  <text x="60" y="180" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" fill="#6B7280">
+    Clean code  ·  Intelligent systems  ·  Great experiences
+  </text>
+
+  <!-- Status dot -->
+  <circle cx="60" cy="212" r="4" fill="#22C55E"/>
+  <text x="74" y="216" font-family="'SF Mono', ui-monospace, monospace" font-size="12" fill="#4B5563">AVAILABLE FOR WORK</text>
+
+  <!-- Right panel: Tech grid -->
+  <g transform="translate(530, 60)">
+    <rect x="0" y="0" width="325" height="170" fill="#111111" rx="12" stroke="#1F2937" stroke-width="1"/>
+
+    <text x="16" y="28" font-family="'SF Mono', ui-monospace, monospace" font-size="10" fill="#6B7280" letter-spacing="2">FOCUS AREAS</text>
+    <line x1="16" y1="38" x2="309" y2="38" stroke="#1F2937" stroke-width="1"/>
+
+    <!-- Row 1 -->
+    <rect x="16" y="52" width="141" height="30" fill="#1A1A1A" rx="6"/>
+    <rect x="16" y="52" width="3" height="30" fill="#6366F1" rx="1.5"/>
+    <text x="28" y="71" font-family="'SF Mono', ui-monospace, monospace" font-size="13" fill="#E5E7EB">AI / ML · Agents</text>
+
+    <rect x="168" y="52" width="141" height="30" fill="#1A1A1A" rx="6"/>
+    <rect x="168" y="52" width="3" height="30" fill="#8B5CF6" rx="1.5"/>
+    <text x="180" y="71" font-family="'SF Mono', ui-monospace, monospace" font-size="13" fill="#E5E7EB">Frontend · React</text>
+
+    <!-- Row 2 -->
+    <rect x="16" y="90" width="141" height="30" fill="#1A1A1A" rx="6"/>
+    <rect x="16" y="90" width="3" height="30" fill="#A78BFA" rx="1.5"/>
+    <text x="28" y="109" font-family="'SF Mono', ui-monospace, monospace" font-size="13" fill="#E5E7EB">Backend · APIs</text>
+
+    <rect x="168" y="90" width="141" height="30" fill="#1A1A1A" rx="6"/>
+    <rect x="168" y="90" width="3" height="30" fill="#C4B5FD" rx="1.5"/>
+    <text x="180" y="109" font-family="'SF Mono', ui-monospace, monospace" font-size="13" fill="#E5E7EB">DevOps · Cloud</text>
+
+    <!-- Row 3 -->
+    <rect x="16" y="128" width="293" height="30" fill="#1A1A1A" rx="6"/>
+    <rect x="16" y="128" width="3" height="30" fill="#6366F1" rx="1.5" opacity="0.5"/>
+    <text x="28" y="147" font-family="'SF Mono', ui-monospace, monospace" font-size="13" fill="#9CA3AF">LLMs · Distributed Systems · System Design</text>
+  </g>
+</svg>
