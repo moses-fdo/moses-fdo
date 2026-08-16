@@ -66,11 +66,11 @@ def generate_svg(stats):
     <style>
       @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono');
       :root {{
-        --bg-color: #16161a;
+        --bg-color: #0d0d0f;
         --accent-glow: #ffffff;
         --text-main: #ffffff;
-        --text-muted: #8e8e93;
-        --text-dark: #636366;
+        --text-muted: #a1a1aa;
+        --text-dark: #767680;
         --border-color: #2a2a30;
       }}
       @media (prefers-color-scheme: light) {{

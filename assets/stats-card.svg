@@ -3,11 +3,11 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono');
       :root {
-        --bg-color: #16161a;
+        --bg-color: #0d0d0f;
         --accent-glow: #ffffff;
         --text-main: #ffffff;
-        --text-muted: #8e8e93;
-        --text-dark: #636366;
+        --text-muted: #a1a1aa;
+        --text-dark: #767680;
         --border-color: #2a2a30;
       }
       @media (prefers-color-scheme: light) {
@@ -41,7 +41,7 @@
   <!-- Stats List -->
   <g transform="translate(25, 65)" class="jb-mono" font-size="11" fill="var(--text-muted)">
     <text x="0" y="0" class="anim-line-1" fill="var(--text-main)" font-weight="700">Total Stars: <tspan fill="var(--accent-glow)">0</tspan></text>
-    <text x="0" y="24" class="anim-line-2">Total Commits: <tspan fill="var(--text-main)">122</tspan></text>
+    <text x="0" y="24" class="anim-line-2">Total Commits: <tspan fill="var(--text-main)">124</tspan></text>
     <text x="0" y="48" class="anim-line-3">Total PRs: <tspan fill="var(--text-main)">6</tspan></text>
     <text x="0" y="72" class="anim-line-4">Total Issues: <tspan fill="var(--text-main)">0</tspan></text>
   </g>

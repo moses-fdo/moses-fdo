@@ -29,10 +29,10 @@ def fetch_contributions():
 def generate_svg(cells):
     # Charcoal theme color palette
     colors = {
-        0: "#18181b",  # Level 0 (bg charcoal)
-        1: "#3f3f46",  # Level 1
-        2: "#71717a",  # Level 2
-        3: "#a1a1aa",  # Level 3
+        0: "#1b1b1f",  # Level 0 (bg charcoal)
+        1: "#4b4b54",  # Level 1
+        2: "#82828c",  # Level 2
+        3: "#c0c0c8",  # Level 3
         4: "#ffffff"   # Level 4 (white)
     }
 
@@ -40,12 +40,12 @@ def generate_svg(cells):
     svg_content.append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 152" width="100%" height="auto">')
     svg_content.append('  <defs>')
     svg_content.append('    <style>')
-    svg_content.append('      @import url(\'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap\');')
+    svg_content.append('      @import url(\'https://fonts.googleapis.com/css2?family=JetBrains+Mono\');')
     svg_content.append('      :root {')
     svg_content.append('        --bg-color: #0f0f11;')
-    svg_content.append('        --card-bg: #16161a;')
+    svg_content.append('        --card-bg: #0d0d0f;')
     svg_content.append('        --border-color: rgba(255, 255, 255, 0.08);')
-    svg_content.append('        --text-color: #8e8e93;')
+    svg_content.append('        --text-color: #a1a1aa;')
     svg_content.append('      }')
     svg_content.append('      @media (prefers-color-scheme: light) {')
     svg_content.append('        :root {')
