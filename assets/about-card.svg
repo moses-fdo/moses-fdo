@@ -1,85 +1,102 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 195" width="100%" height="auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495 195" width="495" height="195">
   <defs>
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+
       :root {
         --bg-color: #16161a;
         --border-color: #2a2a30;
         --accent-glow: #ffffff;
-        --accent-muted: #8e8e93;
-        --text-main: #f2f2f7;
-        --text-muted: #636366;
+        --text-main: #ffffff;
+        --text-muted: #8e8e93;
+        --text-dark: #636366;
       }
       @media (prefers-color-scheme: light) {
         :root {
           --bg-color: #ffffff;
           --border-color: #e5e7eb;
-          --accent-glow: #000000;
-          --accent-muted: #64748b;
+          --accent-glow: #0969da;
           --text-main: #0f172a;
-          --text-muted: #94a3b8;
+          --text-muted: #64748b;
+          --text-dark: #94a3b8;
         }
       }
-      .card-bg { fill: var(--bg-color); stroke: var(--border-color); stroke-width: 1.5; }
-      .text-mono { font-family: "Fira Code", monospace; font-size: 11px; fill: var(--text-main); }
-      .text-title { font-family: "Fira Code", monospace; font-size: 10px; fill: var(--text-muted); }
+      .card { fill: var(--bg-color); stroke: var(--border-color); stroke-width: 1; }
+      .jb-mono { font-family: 'JetBrains Mono', monospace; }
       
-      /* Border trace animation */
+      /* Smooth fade-in and slide-up transition for text lines */
+      @keyframes smoothFadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(6px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .anim-line-1 { animation: smoothFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.2s; opacity: 0; }
+      .anim-line-2 { animation: smoothFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.4s; opacity: 0; }
+      .anim-line-3 { animation: smoothFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.6s; opacity: 0; }
+      .anim-line-4 { animation: smoothFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 1.0s; opacity: 0; }
+      .anim-line-5 { animation: smoothFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 1.2s; opacity: 0; }
+      .anim-line-6 { animation: smoothFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 1.4s; opacity: 0; }
+      .anim-line-7 { animation: smoothFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 1.8s; opacity: 0; }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 0.9; }
+      }
+      .node-pulse {
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      /* Slow, elegant border trace */
       @keyframes borderTrace {
-        0% { stroke-dashoffset: 1230; }
+        0% { stroke-dashoffset: 1380; }
         100% { stroke-dashoffset: 0; }
       }
       .trace-rect {
-        stroke-dasharray: 80 1150;
+        stroke-dasharray: 60 1320;
         stroke: var(--accent-glow);
-        stroke-width: 2;
+        stroke-width: 1.5;
         fill: none;
-        animation: borderTrace 4s linear infinite;
-        filter: drop-shadow(0 0 3px var(--accent-glow));
-      }
-
-      /* Cursor blinking */
-      @keyframes cursorBlink {
-        0%, 49% { opacity: 1; }
-        50%, 100% { opacity: 0; }
-      }
-      .cursor {
-        animation: cursorBlink 1s infinite;
+        animation: borderTrace 8s linear infinite;
+        filter: drop-shadow(0 0 2px var(--accent-glow));
       }
     </style>
   </defs>
 
-  <!-- Card Background -->
-  <rect x="1" y="1" width="418" height="193" rx="8" class="card-bg" />
-  
+  <!-- Card Frame -->
+  <rect x="0.5" y="0.5" width="494" height="194" rx="8" class="card" />
+
   <!-- Animated Border Trace -->
-  <rect x="1" y="1" width="418" height="193" rx="8" class="trace-rect" />
+  <rect x="0.5" y="0.5" width="494" height="194" rx="8" class="trace-rect" />
 
-  <!-- Window Header Header -->
-  <path d="M 1.5,8 A 8,8 0 0,1 9.5,1 L 410.5,1 A 8,8 0 0,1 418.5,8 L 418.5,26 L 1.5,26 Z" fill="var(--border-color)" opacity="0.3"/>
-  <circle cx="15" cy="13" r="3.5" fill="var(--text-muted)" opacity="0.5" />
-  <circle cx="25" cy="13" r="3.5" fill="var(--text-muted)" opacity="0.5" />
-  <circle cx="35" cy="13" r="3.5" fill="var(--text-muted)" opacity="0.5" />
-  <text x="210" y="17" class="text-title" text-anchor="middle">about.md</text>
+  <!-- Section Label -->
+  <text x="25" y="32" class="jb-mono" font-size="9" font-weight="700" fill="var(--text-dark)" letter-spacing="2">WHOAMI</text>
 
-  <!-- Terminal Content -->
-  <g transform="translate(20, 50)" class="text-mono">
-    <!-- Prompt -->
-    <text x="0" y="0">
-      <tspan fill="var(--accent-muted)">$</tspan> cat whoami.txt
-    </text>
-    
-    <!-- Description lines -->
-    <text x="0" y="22" fill="var(--accent-glow)">Moses Fernando | Software Developer</text>
-    
-    <text x="0" y="48">
-      <tspan fill="var(--accent-muted)">$</tspan> cat bio.md
-    </text>
-    
-    <text x="0" y="70" fill="var(--text-main)" opacity="0.95">I build things with code — from zero to</text>
-    <text x="0" y="87" fill="var(--text-main)" opacity="0.95">deployed. Web apps, automation tools,</text>
-    <text x="0" y="104" fill="var(--text-main)" opacity="0.95">CLIs, and everything in between.</text>
+  <!-- Pulsing Status Node -->
+  <g transform="translate(470, 28)">
+    <circle cx="0" cy="0" r="3" fill="#30d158" />
+    <circle class="node-pulse" cx="0" cy="0" r="6" fill="none" stroke="#30d158" stroke-width="1.2" />
+  </g>
 
-    <!-- Blinking Cursor -->
-    <rect class="cursor" x="215" y="93" width="7" height="13" fill="var(--accent-glow)" />
+  <!-- Profile Content -->
+  <!-- Name -->
+  <text x="25" y="65" class="jb-mono anim-line-1" font-size="16" font-weight="700" fill="var(--text-main)" letter-spacing="-0.5">Moses Fernando</text>
+  
+  <!-- Subtitle -->
+  <text x="25" y="84" class="jb-mono anim-line-2" font-size="11" font-weight="500" fill="var(--accent-glow)" letter-spacing="0.5">AI Engineer</text>
+
+  <!-- Divider line -->
+  <line x1="25" y1="100" x2="470" y2="100" class="anim-line-3" stroke="var(--border-color)" stroke-width="1" />
+
+  <!-- Bio Block -->
+  <g transform="translate(25, 122)" class="jb-mono" font-size="10.5" fill="var(--text-muted)">
+    <text x="0" y="0" class="anim-line-4">I build clean, high-performance software.</text>
+    <text x="0" y="16" class="anim-line-5">Specializing in web apps, CLI tools, &amp; automation.</text>
+    <text x="0" y="38" class="anim-line-6" font-size="9.5" fill="var(--text-dark)">&gt; Ready for new opportunities &amp; collaborations.</text>
   </g>
 </svg>

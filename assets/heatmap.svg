@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 160" width="100%" height="auto">
   <defs>
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap');
       :root {
         --bg-color: #0f0f11;
         --border-color: rgba(255, 255, 255, 0.08);
@@ -15,10 +16,10 @@
       }
       .bg { fill: var(--bg-color); transition: fill 0.3s; }
       .card { fill: none; stroke: var(--border-color); stroke-width: 1.5; }
-      .lbl { font-family: "Fira Code", monospace; font-size: 9px; fill: var(--text-color); }
+      .lbl { font-family: 'JetBrains Mono', monospace; font-size: 9px; fill: var(--text-color); }
       @keyframes pulseCell {
-        0%, 100% { opacity: 0.6; }
-        50% { opacity: 1; filter: drop-shadow(0 0 2px #ffffff); }
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; filter: drop-shadow(0 0 1.5px #ffffff); }
       }
       .c-0 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 0.00s; }
       .c-1 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 0.08s; }

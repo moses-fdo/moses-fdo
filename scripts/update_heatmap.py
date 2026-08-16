@@ -40,6 +40,7 @@ def generate_svg(cells):
     svg_content.append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 160" width="100%" height="auto">')
     svg_content.append('  <defs>')
     svg_content.append('    <style>')
+    svg_content.append('      @import url(\'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap\');')
     svg_content.append('      :root {')
     svg_content.append('        --bg-color: #0f0f11;')
     svg_content.append('        --border-color: rgba(255, 255, 255, 0.08);')
@@ -54,12 +55,12 @@ def generate_svg(cells):
     svg_content.append('      }')
     svg_content.append('      .bg { fill: var(--bg-color); transition: fill 0.3s; }')
     svg_content.append('      .card { fill: none; stroke: var(--border-color); stroke-width: 1.5; }')
-    svg_content.append('      .lbl { font-family: "Fira Code", monospace; font-size: 9px; fill: var(--text-color); }')
+    svg_content.append('      .lbl { font-family: \'JetBrains Mono\', monospace; font-size: 9px; fill: var(--text-color); }')
     
     # Keyframe for the sweeping pulse wave
     svg_content.append('      @keyframes pulseCell {')
-    svg_content.append('        0%, 100% { opacity: 0.6; }')
-    svg_content.append('        50% { opacity: 1; filter: drop-shadow(0 0 2px #ffffff); }')
+    svg_content.append('        0%, 100% { opacity: 0.5; }')
+    svg_content.append('        50% { opacity: 1; filter: drop-shadow(0 0 1.5px #ffffff); }')
     svg_content.append('      }')
     
     # Delay styles for the 53 columns
