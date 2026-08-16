@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 195" width="100%" height="auto">
+  <defs>
+    <style>
+      :root {
+        --bg-color: #16161a;
+        --border-color: #2a2a30;
+        --accent-glow: #ffffff;
+        --accent-muted: #8e8e93;
+        --text-main: #f2f2f7;
+        --text-muted: #636366;
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg-color: #ffffff;
+          --border-color: #e5e7eb;
+          --accent-glow: #000000;
+          --accent-muted: #64748b;
+          --text-main: #0f172a;
+          --text-muted: #94a3b8;
+        }
+      }
+      .card-bg { fill: var(--bg-color); stroke: var(--border-color); stroke-width: 1.5; }
+      .text-mono { font-family: "Fira Code", monospace; font-size: 11px; fill: var(--text-main); }
+      .text-title { font-family: "Fira Code", monospace; font-size: 10px; fill: var(--text-muted); }
+      
+      /* Border trace animation */
+      @keyframes borderTrace {
+        0% { stroke-dashoffset: 1230; }
+        100% { stroke-dashoffset: 0; }
+      }
+      .trace-rect {
+        stroke-dasharray: 80 1150;
+        stroke: var(--accent-glow);
+        stroke-width: 2;
+        fill: none;
+        animation: borderTrace 4s linear infinite;
+        filter: drop-shadow(0 0 3px var(--accent-glow));
+      }
+
+      /* Cursor blinking */
+      @keyframes cursorBlink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      .cursor {
+        animation: cursorBlink 1s infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Card Background -->
+  <rect x="1" y="1" width="418" height="193" rx="8" class="card-bg" />
+  
+  <!-- Animated Border Trace -->
+  <rect x="1" y="1" width="418" height="193" rx="8" class="trace-rect" />
+
+  <!-- Window Header Header -->
+  <path d="M 1.5,8 A 8,8 0 0,1 9.5,1 L 410.5,1 A 8,8 0 0,1 418.5,8 L 418.5,26 L 1.5,26 Z" fill="var(--border-color)" opacity="0.3"/>
+  <circle cx="15" cy="13" r="3.5" fill="var(--text-muted)" opacity="0.5" />
+  <circle cx="25" cy="13" r="3.5" fill="var(--text-muted)" opacity="0.5" />
+  <circle cx="35" cy="13" r="3.5" fill="var(--text-muted)" opacity="0.5" />
+  <text x="210" y="17" class="text-title" text-anchor="middle">about.md</text>
+
+  <!-- Terminal Content -->
+  <g transform="translate(20, 50)" class="text-mono">
+    <!-- Prompt -->
+    <text x="0" y="0">
+      <tspan fill="var(--accent-muted)">$</tspan> cat whoami.txt
+    </text>
+    
+    <!-- Description lines -->
+    <text x="0" y="22" fill="var(--accent-glow)">Moses Fernando | Software Developer</text>
+    
+    <text x="0" y="48">
+      <tspan fill="var(--accent-muted)">$</tspan> cat bio.md
+    </text>
+    
+    <text x="0" y="70" fill="var(--text-main)" opacity="0.95">I build things with code — from zero to</text>
+    <text x="0" y="87" fill="var(--text-main)" opacity="0.95">deployed. Web apps, automation tools,</text>
+    <text x="0" y="104" fill="var(--text-main)" opacity="0.95">CLIs, and everything in between.</text>
+
+    <!-- Blinking Cursor -->
+    <rect class="cursor" x="215" y="93" width="7" height="13" fill="var(--accent-glow)" />
+  </g>
+</svg>
