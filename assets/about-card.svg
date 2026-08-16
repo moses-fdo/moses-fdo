@@ -1,30 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495 195" width="495" height="195">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&amp;display=swap');
 
       :root {
-        --bg-color: #16161a;
-        --border-color: #2a2a30;
         --accent-glow: #ffffff;
         --text-main: #ffffff;
         --text-muted: #8e8e93;
         --text-dark: #636366;
+        --border-color: #2a2a30;
       }
       @media (prefers-color-scheme: light) {
         :root {
-          --bg-color: #ffffff;
-          --border-color: #e5e7eb;
           --accent-glow: #0969da;
           --text-main: #0f172a;
           --text-muted: #64748b;
           --text-dark: #94a3b8;
+          --border-color: #e5e7eb;
         }
       }
-      .card { fill: var(--bg-color); stroke: var(--border-color); stroke-width: 1; }
       .jb-mono { font-family: 'JetBrains Mono', monospace; }
       
-      /* Smooth fade-in and slide-up transition for text lines */
+      /* Smooth fade-in transitions */
       @keyframes smoothFadeIn {
         from {
           opacity: 0;
@@ -42,7 +39,6 @@
       .anim-line-4 { animation: smoothFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 1.0s; opacity: 0; }
       .anim-line-5 { animation: smoothFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 1.2s; opacity: 0; }
       .anim-line-6 { animation: smoothFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 1.4s; opacity: 0; }
-      .anim-line-7 { animation: smoothFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 1.8s; opacity: 0; }
 
       @keyframes pulse {
         0%, 100% { opacity: 0.3; }
@@ -51,28 +47,8 @@
       .node-pulse {
         animation: pulse 2s ease-in-out infinite;
       }
-
-      /* Slow, elegant border trace */
-      @keyframes borderTrace {
-        0% { stroke-dashoffset: 1380; }
-        100% { stroke-dashoffset: 0; }
-      }
-      .trace-rect {
-        stroke-dasharray: 60 1320;
-        stroke: var(--accent-glow);
-        stroke-width: 1.5;
-        fill: none;
-        animation: borderTrace 8s linear infinite;
-        filter: drop-shadow(0 0 2px var(--accent-glow));
-      }
     </style>
   </defs>
-
-  <!-- Card Frame -->
-  <rect x="0.5" y="0.5" width="494" height="194" rx="8" class="card" />
-
-  <!-- Animated Border Trace -->
-  <rect x="0.5" y="0.5" width="494" height="194" rx="8" class="trace-rect" />
 
   <!-- Section Label -->
   <text x="25" y="32" class="jb-mono" font-size="9" font-weight="700" fill="var(--text-dark)" letter-spacing="2">WHOAMI</text>
@@ -91,7 +67,7 @@
   <text x="25" y="84" class="jb-mono anim-line-2" font-size="11" font-weight="500" fill="var(--accent-glow)" letter-spacing="0.5">AI Engineer</text>
 
   <!-- Divider line -->
-  <line x1="25" y1="100" x2="470" y2="100" class="anim-line-3" stroke="var(--border-color)" stroke-width="1" />
+  <line x1="25" y1="100" x2="470" y2="100" class="anim-line-3" stroke="var(--border-color)" stroke-opacity="0.5" stroke-width="1" />
 
   <!-- Bio Block -->
   <g transform="translate(25, 122)" class="jb-mono" font-size="10.5" fill="var(--text-muted)">

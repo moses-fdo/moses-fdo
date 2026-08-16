@@ -6,7 +6,7 @@
       <img src="assets/about-card.svg" width="100%" alt="About Me">
     </td>
     <td width="50%" align="center">
-      <img src="https://github-readme-stats-eight-mu.vercel.app/api?username=moses-fdo&show_icons=true&count_private=true&bg_color=16161a&border_color=2a2a30&title_color=ffffff&icon_color=ffffff&text_color=8e8e93&border_radius=8" width="100%" alt="GitHub Stats">
+      <img src="https://github-readme-stats-eight-mu.vercel.app/api?username=moses-fdo&show_icons=true&count_private=true&bg_color=00000000&hide_border=true&title_color=ffffff&icon_color=ffffff&text_color=8e8e93&font_family=JetBrains+Mono" width="100%" alt="GitHub Stats">
     </td>
   </tr>
   <tr>

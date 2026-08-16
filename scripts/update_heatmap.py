@@ -53,8 +53,8 @@ def generate_svg(cells):
     svg_content.append('          --text-color: #64748b;')
     svg_content.append('        }')
     svg_content.append('      }')
-    svg_content.append('      .bg { fill: var(--bg-color); transition: fill 0.3s; }')
-    svg_content.append('      .card { fill: none; stroke: var(--border-color); stroke-width: 1.5; }')
+    svg_content.append('      .bg { fill: none; }')
+    svg_content.append('      .card { fill: none; stroke: none; }')
     svg_content.append('      .lbl { font-family: \'JetBrains Mono\', monospace; font-size: 9px; fill: var(--text-color); }')
     
     # Keyframe for the sweeping pulse wave
