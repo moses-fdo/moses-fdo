@@ -37,7 +37,7 @@ def generate_svg(cells):
     }
 
     svg_content = []
-    svg_content.append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 160" width="100%" height="auto">')
+    svg_content.append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 152" width="100%" height="auto">')
     svg_content.append('  <defs>')
     svg_content.append('    <style>')
     svg_content.append('      @import url(\'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap\');')
@@ -63,8 +63,8 @@ def generate_svg(cells):
     svg_content.append('  </defs>')
     
     # Background & Frame
-    svg_content.append('  <rect width="900" height="160" class="bg" />')
-    svg_content.append('  <rect x="0" y="10" width="900" height="140" rx="8" class="card" />')
+    svg_content.append('  <rect width="900" height="152" class="bg" />')
+    svg_content.append('  <rect x="0" y="0" width="900" height="152" rx="8" class="card" />')
     
     # Compute Month Labels dynamically based on date objects in column 0-52
     month_labels = []
@@ -89,17 +89,17 @@ def generate_svg(cells):
     # Draw Month Labels
     for name, col_idx in month_labels:
         x_pos = 50 + col_idx * 14
-        svg_content.append(f'  <text x="{x_pos}" y="28" class="lbl">{name}</text>')
+        svg_content.append(f'  <text x="{x_pos}" y="24" class="lbl">{name}</text>')
         
     # Day Labels
     days = [("Mon", 1), ("Wed", 3), ("Fri", 5)]
     for name, row_idx in days:
-        y_pos = 38 + row_idx * 14 + 8 # align nicely
+        y_pos = 34 + row_idx * 14 + 8 # align nicely
         svg_content.append(f'  <text x="25" y="{y_pos}" class="lbl">{name}</text>')
         
     # Render Cells
     start_x = 50
-    start_y = 33
+    start_y = 29
     
     for col in range(53):
         x = start_x + col * 14
@@ -113,7 +113,7 @@ def generate_svg(cells):
                 
     # Legend
     legend_start_x = 730
-    legend_y = 135
+    legend_y = 131
     svg_content.append(f'  <text x="{legend_start_x - 30}" y="{legend_y + 8}" class="lbl">Less</text>')
     for l in range(5):
         lx = legend_start_x + l * 14
