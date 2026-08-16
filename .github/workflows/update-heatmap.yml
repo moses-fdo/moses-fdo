@@ -21,13 +21,10 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Run Heatmap Generator
-        run: python scripts/update_heatmap.py
-
-      - name: Run Stats Generator
+      - name: Run Dashboard Generator
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/update_stats.py
+        run: python scripts/update_dashboard.py
 
       - name: Commit and Push Changes
         run: |
