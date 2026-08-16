@@ -24,10 +24,15 @@ jobs:
       - name: Run Heatmap Generator
         run: python scripts/update_heatmap.py
 
+      - name: Run Stats Generator
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/update_stats.py
+
       - name: Commit and Push Changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/heatmap.svg
-          git diff-index --quiet HEAD || git commit -m "chore: update real-time contribution heatmap [skip ci]"
+          git add assets/heatmap.svg assets/stats-card.svg
+          git diff-index --quiet HEAD || git commit -m "chore: update real-time contribution assets [skip ci]"
           git push
