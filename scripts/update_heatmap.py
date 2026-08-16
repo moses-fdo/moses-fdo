@@ -43,37 +43,28 @@ def generate_svg(cells):
     svg_content.append('      @import url(\'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap\');')
     svg_content.append('      :root {')
     svg_content.append('        --bg-color: #0f0f11;')
+    svg_content.append('        --card-bg: #16161a;')
     svg_content.append('        --border-color: rgba(255, 255, 255, 0.08);')
     svg_content.append('        --text-color: #8e8e93;')
     svg_content.append('      }')
     svg_content.append('      @media (prefers-color-scheme: light) {')
     svg_content.append('        :root {')
     svg_content.append('          --bg-color: #f8fafc;')
+    svg_content.append('          --card-bg: #ffffff;')
     svg_content.append('          --border-color: rgba(0, 0, 0, 0.08);')
     svg_content.append('          --text-color: #64748b;')
     svg_content.append('        }')
     svg_content.append('      }')
     svg_content.append('      .bg { fill: none; }')
-    svg_content.append('      .card { fill: none; stroke: none; }')
+    svg_content.append('      .card { fill: var(--card-bg); stroke: none; }')
     svg_content.append('      .lbl { font-family: \'JetBrains Mono\', monospace; font-size: 9px; fill: var(--text-color); }')
     
-    # Keyframe for the sweeping pulse wave
-    svg_content.append('      @keyframes pulseCell {')
-    svg_content.append('        0%, 100% { opacity: 0.5; }')
-    svg_content.append('        50% { opacity: 1; filter: drop-shadow(0 0 1.5px #ffffff); }')
-    svg_content.append('      }')
-    
-    # Delay styles for the 53 columns
-    for col in range(53):
-        delay = col * 0.08
-        svg_content.append(f'      .c-{col} {{ animation: pulseCell 4s ease-in-out infinite; animation-delay: {delay:.2f}s; }}')
-        
     svg_content.append('    </style>')
     svg_content.append('  </defs>')
     
     # Background & Frame
     svg_content.append('  <rect width="900" height="160" class="bg" />')
-    svg_content.append('  <rect x="15" y="10" width="870" height="140" rx="8" class="card" />')
+    svg_content.append('  <rect x="0" y="10" width="900" height="140" rx="8" class="card" />')
     
     # Compute Month Labels dynamically based on date objects in column 0-52
     month_labels = []
@@ -118,10 +109,7 @@ def generate_svg(cells):
             lvl = cell_data['level']
             color = colors.get(lvl, colors[0])
             
-            if lvl == 0:
-                svg_content.append(f'  <rect x="{x}" y="{y}" width="10" height="10" rx="2" fill="{color}" />')
-            else:
-                svg_content.append(f'  <rect class="c-{col}" x="{x}" y="{y}" width="10" height="10" rx="2" fill="{color}" />')
+            svg_content.append(f'  <rect x="{x}" y="{y}" width="10" height="10" rx="2" fill="{color}" />')
                 
     # Legend
     legend_start_x = 730

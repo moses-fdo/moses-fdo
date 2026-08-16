@@ -4,80 +4,25 @@
       @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap');
       :root {
         --bg-color: #0f0f11;
+        --card-bg: #16161a;
         --border-color: rgba(255, 255, 255, 0.08);
         --text-color: #8e8e93;
       }
       @media (prefers-color-scheme: light) {
         :root {
           --bg-color: #f8fafc;
+          --card-bg: #ffffff;
           --border-color: rgba(0, 0, 0, 0.08);
           --text-color: #64748b;
         }
       }
       .bg { fill: none; }
-      .card { fill: none; stroke: none; }
+      .card { fill: var(--card-bg); stroke: none; }
       .lbl { font-family: 'JetBrains Mono', monospace; font-size: 9px; fill: var(--text-color); }
-      @keyframes pulseCell {
-        0%, 100% { opacity: 0.5; }
-        50% { opacity: 1; filter: drop-shadow(0 0 1.5px #ffffff); }
-      }
-      .c-0 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 0.00s; }
-      .c-1 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 0.08s; }
-      .c-2 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 0.16s; }
-      .c-3 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 0.24s; }
-      .c-4 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 0.32s; }
-      .c-5 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 0.40s; }
-      .c-6 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 0.48s; }
-      .c-7 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 0.56s; }
-      .c-8 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 0.64s; }
-      .c-9 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 0.72s; }
-      .c-10 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 0.80s; }
-      .c-11 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 0.88s; }
-      .c-12 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 0.96s; }
-      .c-13 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 1.04s; }
-      .c-14 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 1.12s; }
-      .c-15 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 1.20s; }
-      .c-16 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 1.28s; }
-      .c-17 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 1.36s; }
-      .c-18 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 1.44s; }
-      .c-19 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 1.52s; }
-      .c-20 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 1.60s; }
-      .c-21 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 1.68s; }
-      .c-22 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 1.76s; }
-      .c-23 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 1.84s; }
-      .c-24 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 1.92s; }
-      .c-25 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 2.00s; }
-      .c-26 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 2.08s; }
-      .c-27 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 2.16s; }
-      .c-28 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 2.24s; }
-      .c-29 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 2.32s; }
-      .c-30 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 2.40s; }
-      .c-31 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 2.48s; }
-      .c-32 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 2.56s; }
-      .c-33 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 2.64s; }
-      .c-34 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 2.72s; }
-      .c-35 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 2.80s; }
-      .c-36 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 2.88s; }
-      .c-37 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 2.96s; }
-      .c-38 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 3.04s; }
-      .c-39 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 3.12s; }
-      .c-40 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 3.20s; }
-      .c-41 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 3.28s; }
-      .c-42 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 3.36s; }
-      .c-43 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 3.44s; }
-      .c-44 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 3.52s; }
-      .c-45 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 3.60s; }
-      .c-46 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 3.68s; }
-      .c-47 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 3.76s; }
-      .c-48 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 3.84s; }
-      .c-49 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 3.92s; }
-      .c-50 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 4.00s; }
-      .c-51 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 4.08s; }
-      .c-52 { animation: pulseCell 4s ease-in-out infinite; animation-delay: 4.16s; }
     </style>
   </defs>
   <rect width="900" height="160" class="bg" />
-  <rect x="15" y="10" width="870" height="140" rx="8" class="card" />
+  <rect x="0" y="10" width="900" height="140" rx="8" class="card" />
   <text x="50" y="28" class="lbl">Aug</text>
   <text x="92" y="28" class="lbl">Sep</text>
   <text x="148" y="28" class="lbl">Oct</text>
@@ -424,39 +369,39 @@
   <rect x="694" y="103" width="10" height="10" rx="2" fill="#18181b" />
   <rect x="694" y="117" width="10" height="10" rx="2" fill="#18181b" />
   <rect x="708" y="33" width="10" height="10" rx="2" fill="#18181b" />
-  <rect class="c-47" x="708" y="47" width="10" height="10" rx="2" fill="#71717a" />
-  <rect class="c-47" x="708" y="61" width="10" height="10" rx="2" fill="#ffffff" />
-  <rect class="c-47" x="708" y="75" width="10" height="10" rx="2" fill="#a1a1aa" />
-  <rect class="c-47" x="708" y="89" width="10" height="10" rx="2" fill="#71717a" />
+  <rect x="708" y="47" width="10" height="10" rx="2" fill="#71717a" />
+  <rect x="708" y="61" width="10" height="10" rx="2" fill="#ffffff" />
+  <rect x="708" y="75" width="10" height="10" rx="2" fill="#a1a1aa" />
+  <rect x="708" y="89" width="10" height="10" rx="2" fill="#71717a" />
   <rect x="708" y="103" width="10" height="10" rx="2" fill="#18181b" />
-  <rect class="c-47" x="708" y="117" width="10" height="10" rx="2" fill="#3f3f46" />
-  <rect class="c-48" x="722" y="33" width="10" height="10" rx="2" fill="#a1a1aa" />
-  <rect class="c-48" x="722" y="47" width="10" height="10" rx="2" fill="#71717a" />
-  <rect class="c-48" x="722" y="61" width="10" height="10" rx="2" fill="#3f3f46" />
-  <rect class="c-48" x="722" y="75" width="10" height="10" rx="2" fill="#3f3f46" />
+  <rect x="708" y="117" width="10" height="10" rx="2" fill="#3f3f46" />
+  <rect x="722" y="33" width="10" height="10" rx="2" fill="#a1a1aa" />
+  <rect x="722" y="47" width="10" height="10" rx="2" fill="#71717a" />
+  <rect x="722" y="61" width="10" height="10" rx="2" fill="#3f3f46" />
+  <rect x="722" y="75" width="10" height="10" rx="2" fill="#3f3f46" />
   <rect x="722" y="89" width="10" height="10" rx="2" fill="#18181b" />
   <rect x="722" y="103" width="10" height="10" rx="2" fill="#18181b" />
-  <rect class="c-48" x="722" y="117" width="10" height="10" rx="2" fill="#a1a1aa" />
-  <rect class="c-49" x="736" y="33" width="10" height="10" rx="2" fill="#ffffff" />
-  <rect class="c-49" x="736" y="47" width="10" height="10" rx="2" fill="#ffffff" />
-  <rect class="c-49" x="736" y="61" width="10" height="10" rx="2" fill="#71717a" />
-  <rect class="c-49" x="736" y="75" width="10" height="10" rx="2" fill="#ffffff" />
-  <rect class="c-49" x="736" y="89" width="10" height="10" rx="2" fill="#ffffff" />
+  <rect x="722" y="117" width="10" height="10" rx="2" fill="#a1a1aa" />
+  <rect x="736" y="33" width="10" height="10" rx="2" fill="#ffffff" />
+  <rect x="736" y="47" width="10" height="10" rx="2" fill="#ffffff" />
+  <rect x="736" y="61" width="10" height="10" rx="2" fill="#71717a" />
+  <rect x="736" y="75" width="10" height="10" rx="2" fill="#ffffff" />
+  <rect x="736" y="89" width="10" height="10" rx="2" fill="#ffffff" />
   <rect x="736" y="103" width="10" height="10" rx="2" fill="#18181b" />
-  <rect class="c-49" x="736" y="117" width="10" height="10" rx="2" fill="#3f3f46" />
-  <rect class="c-50" x="750" y="33" width="10" height="10" rx="2" fill="#71717a" />
-  <rect class="c-50" x="750" y="47" width="10" height="10" rx="2" fill="#71717a" />
-  <rect class="c-50" x="750" y="61" width="10" height="10" rx="2" fill="#71717a" />
-  <rect class="c-50" x="750" y="75" width="10" height="10" rx="2" fill="#ffffff" />
-  <rect class="c-50" x="750" y="89" width="10" height="10" rx="2" fill="#3f3f46" />
-  <rect class="c-50" x="750" y="103" width="10" height="10" rx="2" fill="#3f3f46" />
+  <rect x="736" y="117" width="10" height="10" rx="2" fill="#3f3f46" />
+  <rect x="750" y="33" width="10" height="10" rx="2" fill="#71717a" />
+  <rect x="750" y="47" width="10" height="10" rx="2" fill="#71717a" />
+  <rect x="750" y="61" width="10" height="10" rx="2" fill="#71717a" />
+  <rect x="750" y="75" width="10" height="10" rx="2" fill="#ffffff" />
+  <rect x="750" y="89" width="10" height="10" rx="2" fill="#3f3f46" />
+  <rect x="750" y="103" width="10" height="10" rx="2" fill="#3f3f46" />
   <rect x="750" y="117" width="10" height="10" rx="2" fill="#18181b" />
   <rect x="764" y="33" width="10" height="10" rx="2" fill="#18181b" />
   <rect x="764" y="47" width="10" height="10" rx="2" fill="#18181b" />
   <rect x="764" y="61" width="10" height="10" rx="2" fill="#18181b" />
   <rect x="764" y="75" width="10" height="10" rx="2" fill="#18181b" />
   <rect x="764" y="89" width="10" height="10" rx="2" fill="#18181b" />
-  <rect class="c-51" x="764" y="103" width="10" height="10" rx="2" fill="#3f3f46" />
+  <rect x="764" y="103" width="10" height="10" rx="2" fill="#3f3f46" />
   <rect x="764" y="117" width="10" height="10" rx="2" fill="#18181b" />
   <rect x="778" y="33" width="10" height="10" rx="2" fill="#18181b" />
   <rect x="778" y="47" width="10" height="10" rx="2" fill="#18181b" />

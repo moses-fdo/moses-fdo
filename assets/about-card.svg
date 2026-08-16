@@ -4,6 +4,7 @@
       @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&amp;display=swap');
 
       :root {
+        --bg-color: #16161a;
         --accent-glow: #ffffff;
         --text-main: #ffffff;
         --text-muted: #8e8e93;
@@ -12,6 +13,7 @@
       }
       @media (prefers-color-scheme: light) {
         :root {
+          --bg-color: #ffffff;
           --accent-glow: #0969da;
           --text-main: #0f172a;
           --text-muted: #64748b;
@@ -20,6 +22,7 @@
         }
       }
       .jb-mono { font-family: 'JetBrains Mono', monospace; }
+      .card { fill: var(--bg-color); stroke: none; }
       
       /* Smooth fade-in transitions */
       @keyframes smoothFadeIn {
@@ -49,6 +52,9 @@
       }
     </style>
   </defs>
+
+  <!-- Card Frame (Background fill restored, border stroke remains removed) -->
+  <rect x="0.5" y="0.5" width="494" height="194" rx="8" class="card" />
 
   <!-- Section Label -->
   <text x="25" y="32" class="jb-mono" font-size="9" font-weight="700" fill="var(--text-dark)" letter-spacing="2">WHOAMI</text>
