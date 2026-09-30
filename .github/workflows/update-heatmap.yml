@@ -31,5 +31,10 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/heatmap.svg assets/stats-card.svg
-          git diff-index --quiet HEAD || git commit -m "chore: update real-time contribution assets [skip ci]"
-          git push
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "chore: update real-time contribution assets [skip ci]"
+            git push
+          else
+            echo "No changes in assets to commit."
+          fi
+

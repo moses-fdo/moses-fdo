@@ -1,8 +1,10 @@
 import urllib.request
+import urllib.error
 import json
 import re
 import datetime
 import os
+import sys
 from html.parser import HTMLParser
 
 # ==============================================================================
@@ -25,10 +27,10 @@ class ContributionParser(HTMLParser):
                     date = d.get('data-date', '')
                     self.cells[(row, col)] = {'level': lvl, 'date': date}
 
-def fetch_contributions():
-    url = 'https://github.com/users/moses-fdo/contributions'
+def fetch_contributions(username='moses-fdo'):
+    url = f'https://github.com/users/{username}/contributions'
     req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
-    with urllib.request.urlopen(req) as response:
+    with urllib.request.urlopen(req, timeout=30) as response:
         return response.read().decode('utf-8')
 
 def generate_heatmap_svg(cells):
@@ -130,11 +132,24 @@ def generate_heatmap_svg(cells):
 # ==============================================================================
 
 def fetch_json(url, token=None):
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
+        'Accept': 'application/vnd.github+json'
+    }
     if token:
-        req.add_header('Authorization', f'token {token}')
+        req = urllib.request.Request(url, headers={**headers, 'Authorization': f'Bearer {token}'})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as response:
+                return json.loads(response.read().decode('utf-8'))
+        except urllib.error.HTTPError as e:
+            print(f"Warning: Authenticated fetch failed for {url} ({e.code} {e.reason}). Falling back to unauthenticated request...")
+        except Exception as e:
+            print(f"Warning: Request with token failed for {url}: {e}")
+
+    # Fallback / unauthenticated request
+    req = urllib.request.Request(url, headers=headers)
     try:
-        with urllib.request.urlopen(req) as response:
+        with urllib.request.urlopen(req, timeout=30) as response:
             return json.loads(response.read().decode('utf-8'))
     except Exception as e:
         print(f"Error fetching {url}: {e}")
@@ -143,19 +158,19 @@ def fetch_json(url, token=None):
 def get_stats(username, token=None):
     # 1. Total Stars
     repos = fetch_json(f"https://api.github.com/users/{username}/repos?per_page=100", token)
-    stars = sum(repo.get('stargazers_count', 0) for repo in repos) if repos else 0
+    stars = sum(repo.get('stargazers_count', 0) for repo in repos if isinstance(repo, dict)) if isinstance(repos, list) else 0
     
     # 2. Total Commits
     commits_data = fetch_json(f"https://api.github.com/search/commits?q=author:{username}", token)
-    commits = commits_data.get('total_count', 0) if commits_data else 0
+    commits = commits_data.get('total_count', 0) if isinstance(commits_data, dict) else 0
     
     # 3. Total PRs
     prs_data = fetch_json(f"https://api.github.com/search/issues?q=author:{username}+type:pr", token)
-    prs = prs_data.get('total_count', 0) if prs_data else 0
+    prs = prs_data.get('total_count', 0) if isinstance(prs_data, dict) else 0
     
     # 4. Total Issues
     issues_data = fetch_json(f"https://api.github.com/search/issues?q=author:{username}+type:issue", token)
-    issues = issues_data.get('total_count', 0) if issues_data else 0
+    issues = issues_data.get('total_count', 0) if isinstance(issues_data, dict) else 0
     
     return {
         'stars': stars,
@@ -251,17 +266,20 @@ def generate_stats_svg(stats):
 # ==============================================================================
 
 def main():
-    assets_dir = '/home/mosesfdo/Documents/GitHub/moses-fdo/assets'
+    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    assets_dir = os.path.join(repo_root, 'assets')
     os.makedirs(assets_dir, exist_ok=True)
+    
+    username = os.environ.get('GITHUB_REPOSITORY_OWNER', 'moses-fdo')
     
     # Run Heatmap Component
     try:
-        html = fetch_contributions()
+        html = fetch_contributions(username)
         parser = ContributionParser()
         parser.feed(html)
         if parser.cells:
             svg = generate_heatmap_svg(parser.cells)
-            with open(os.path.join(assets_dir, 'heatmap.svg'), 'w') as f:
+            with open(os.path.join(assets_dir, 'heatmap.svg'), 'w', encoding='utf-8') as f:
                 f.write(svg)
             print("Successfully updated real-time contribution heatmap.")
         else:
@@ -272,10 +290,10 @@ def main():
     # Run Stats Component
     try:
         token = os.environ.get('GITHUB_TOKEN')
-        stats = get_stats('moses-fdo', token)
+        stats = get_stats(username, token)
         if stats:
             svg = generate_stats_svg(stats)
-            with open(os.path.join(assets_dir, 'stats-card.svg'), 'w') as f:
+            with open(os.path.join(assets_dir, 'stats-card.svg'), 'w', encoding='utf-8') as f:
                 f.write(svg)
             print("Successfully generated custom stats card.")
         else:
