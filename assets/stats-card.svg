@@ -43,7 +43,7 @@
     <text x="0" y="0" class="anim-line-1" fill="var(--text-main)" font-weight="700">Total Stars: <tspan fill="var(--accent-glow)">1</tspan></text>
     <text x="0" y="24" class="anim-line-2">Total Commits: <tspan fill="var(--text-main)">165</tspan></text>
     <text x="0" y="48" class="anim-line-3">Total PRs: <tspan fill="var(--text-main)">7</tspan></text>
-    <text x="0" y="72" class="anim-line-4">Total Issues: <tspan fill="var(--text-main)">0</tspan></text>
+    <text x="0" y="72" class="anim-line-4">Total Issues: <tspan fill="var(--text-main)">1</tspan></text>
   </g>
 
   <!-- Grade Ring Indicator -->
