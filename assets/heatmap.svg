@@ -372,7 +372,7 @@
   <rect x="708" y="43" width="10" height="10" rx="2" fill="#1b1b1f" />
   <rect x="708" y="57" width="10" height="10" rx="2" fill="#1b1b1f" />
   <rect x="708" y="71" width="10" height="10" rx="2" fill="#82828c" />
-  <rect x="708" y="85" width="10" height="10" rx="2" fill="#4b4b54" />
+  <rect x="708" y="85" width="10" height="10" rx="2" fill="#82828c" />
   <rect x="708" y="99" width="10" height="10" rx="2" fill="#4b4b54" />
   <rect x="708" y="113" width="10" height="10" rx="2" fill="#1b1b1f" />
   <rect x="722" y="29" width="10" height="10" rx="2" fill="#1b1b1f" />
@@ -391,9 +391,9 @@
   <rect x="736" y="113" width="10" height="10" rx="2" fill="#1b1b1f" />
   <rect x="750" y="29" width="10" height="10" rx="2" fill="#1b1b1f" />
   <rect x="750" y="43" width="10" height="10" rx="2" fill="#1b1b1f" />
-  <rect x="750" y="57" width="10" height="10" rx="2" fill="#1b1b1f" />
-  <rect x="750" y="71" width="10" height="10" rx="2" fill="#4b4b54" />
-  <rect x="750" y="85" width="10" height="10" rx="2" fill="#1b1b1f" />
+  <rect x="750" y="57" width="10" height="10" rx="2" fill="#4b4b54" />
+  <rect x="750" y="71" width="10" height="10" rx="2" fill="#82828c" />
+  <rect x="750" y="85" width="10" height="10" rx="2" fill="#4b4b54" />
   <rect x="750" y="99" width="10" height="10" rx="2" fill="#1b1b1f" />
   <rect x="750" y="113" width="10" height="10" rx="2" fill="#1b1b1f" />
   <rect x="764" y="29" width="10" height="10" rx="2" fill="#1b1b1f" />
@@ -407,8 +407,8 @@
   <rect x="778" y="43" width="10" height="10" rx="2" fill="#4b4b54" />
   <rect x="778" y="57" width="10" height="10" rx="2" fill="#4b4b54" />
   <rect x="778" y="71" width="10" height="10" rx="2" fill="#4b4b54" />
-  <rect x="778" y="85" width="10" height="10" rx="2" fill="#1b1b1f" />
-  <rect x="778" y="99" width="10" height="10" rx="2" fill="#1b1b1f" />
+  <rect x="778" y="85" width="10" height="10" rx="2" fill="#4b4b54" />
+  <rect x="778" y="99" width="10" height="10" rx="2" fill="#c0c0c8" />
   <rect x="778" y="113" width="10" height="10" rx="2" fill="#1b1b1f" />
   <text x="700" y="139" class="lbl">Less</text>
   <rect x="730" y="131" width="10" height="10" rx="2" fill="#1b1b1f" />
